@@ -1,0 +1,298 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    letter-spacing: 0;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111111;
+    color: #eeeeee;
+}
+.langselector{
+    dispay: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+.langselector__item {
+    display: inline-block;
+    padding: 0.7rem;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 9pt;
+    color: #eeeeee;
+}
+.langselector__item:hover {
+    color: #111111;
+    background-color: #eeeeee;    
+}
+.langselector__item--active {
+    color: #111111;
+    background-color: #eeeeee;
+}
+.logo {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    background-color: #111111;
+}
+.logo > span {
+    display: none;
+}
+.logo--jpn {
+    background-image: url("/logo_jpn.png");
+}
+.logo--eng {
+    background-image: url("/logo_eng.png");
+}
+.copy {
+    position: relative;
+    font-size: 20pt;
+    font-family: "adobe-garamond-pro", "dnp-shuei-ymincho-std", serif;
+    font-style: normal;
+    font-weight: 500;
+}
+.copy__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url("/hero.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+.hero__inner {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+}
+.hero__inner--jpn {
+    background-image: url("/logo_jpn.png");
+}
+.hero__inner--eng {
+    background-image: url("/logo_eng.png");
+}
+.info {
+    width: 100%;
+    display: flex;
+    padding: 3rem;
+    position: relative;
+    background-image: url("/hero.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+}
+@media (max-width: 767px) {
+    .info {
+	flex-wrap: wrap;
+	justify-content: center;
+    }
+}
+.info::before {
+    content: '';
+    width: 100%;
+    background: inherit;
+    filter: blur(10px);
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    right: 10px;
+    left: -10px;
+    z-index: -1;
+}
+.info__content {
+    font-family: adobe-garamond-pro, dnp-shuei-ymincho-std, serif;
+    color: #222222;
+    width: 500px;
+    padding: 2rem;
+    background-color: #eeeeee;
+    border-radius: 1px;
+}
+.info__image {
+    padding: 3rem;
+    width: 500px;
+    height: calc(500px * 1.41421356);
+}
+.info__image > img {
+    width: 100%;
+    height: auto;
+}
+h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30pt;
+    border: solid #222222;
+    border-width: 0 0 1px;
+}
+a {
+    color: #fc2063;
+}
+a:visited {
+    color: #444444;
+}
+.info__text{
+    padding: 1em 0;
+}
+.info__line{
+    padding: 1em 0 0;
+}
+.info__wrapper {
+    text-align: center;
+}
+.info__button {
+    font-family: adobe-garamond-pro, dnp-shuei-ymincho-std, serif;
+    color: #eeeeee;
+    background-color: #222222;
+    padding: 1rem 3rem;
+    border-style: none;
+    border-radius: 1px;
+    margin: auto;
+    box-shadow: 1px 1px 1px 1px #666;
+    transition: 0.3s;
+}
+.info__button:hover {
+    background-color: #fc2063;
+}
+.tweet {
+    width: 80px;
+    height: 80px;
+    padding: 1rem;
+}
+.copyright {
+    z-index: 5;
+    text-align: center;
+    padding: 1rem;
+    font-family: adobe-garamond-pro, dnp-shuei-ymincho-std, serif;
+}    
+.sample {
+    width: calc((100vh - 3em) * 1.41421356);
+    height: calc(100vh - 3em);
+    margin: auto; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+}
+.sample--single {
+    width: calc((100vh - 3em) * 1.41421356 / 2);
+}
+.sample__image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    transition: 0.3s;
+}
+.sample__image--left {
+    background-position: right;
+    left: 0;
+}
+.sample__image--right {
+    background-position: left;
+    right: 0;
+}
+.sample__image--single {
+    background-position: center;
+    width: 100%;
+    left: 0;
+}
+.sample__button {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    z-index: 100;
+    display: block;
+}
+.sample__button--next {
+    left: 0;
+}
+.sample__button--prev {
+    right: 0;
+}
+.sample__page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 9pt;
+    color: #eeeeee;
+    background-color: rgba( 0, 0, 0, 0.5);
+    z-index: 200;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+.modal--hidden {
+    pointer-events: none;
+    opacity: 0;
+}
+.modal__content {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 1px;
+}
+.modal__close {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: fixed;
+    right: 10px;
+    top: 50px;
+    background-color: #333333;
+    border-radius: 50%;
+    z-index: 30;
+}
+.modal__close > span {
+  display: inline-block;
+  position: relative;
+  margin: 5px 20px 0 14px;
+  padding: 0;
+  width: 2px;
+  height: 21px;
+  background: #eeeeee;
+  transform: rotate(45deg);
+}
+.modal__close > span::before{
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -9px;
+  width: 20px;
+  height: 2px;
+  margin-top: -2px;
+  background: #eeeeee;
+}
